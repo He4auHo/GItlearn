@@ -5,12 +5,15 @@
 7 -> да
 1 -> нет
 */
-void DZ_2_3(){
-  int num=int.Parse(Console.ReadLine());
-if(num>5){
+void task15(){
+  //int num=int.Parse(Console.ReadLine());
+  int num=Convert.ToInt16(Console.ReadLine());
+if(num>5&&num<8){
     Console.WriteLine("да");
   }
-  else{
+  else if(num>0&&num<6){
     Console.WriteLine("нет");}
+  else{
+    Console.WriteLine("нет такого дня недели");}
 }
-DZ_2_3();
+task15();

@@ -3,22 +3,23 @@
 782 -> 8
 918 -> 1
 */
-void DZ_2_1()
+void task10()
 { 
-int num=int.Parse(Console.ReadLine());
-int a,b=0,c=0;
+//int num=int.Parse(Console.ReadLine());
+int num=Convert.ToInt16(Console.ReadLine());
+int a,b=0,dd=0;
 a=num;
 int i=2;
 int [] ar=new int[3];
 do{
   a=num/10;
   b=a*10;
-  c=num-b;
+  dd=num-b;
   num=a;
-  ar[i]=c;
+  ar[i]=dd;
   i=i-1;
 }
 while(a>1);
 Console.WriteLine(ar[1]);
 } 
-DZ_2_1();
+task10();

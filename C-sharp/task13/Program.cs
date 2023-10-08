@@ -3,8 +3,9 @@
 78 -> третьей цифры нет
 32679 -> 6
 */
-void DZ_2_2(){
-int num=int.Parse(Console.ReadLine());
+void task13(){
+//int num=int.Parse(Console.ReadLine());
+int num=Convert.ToInt16(Console.ReadLine());
 int a,b=0,c=0;
 a=num;
 int i=2;
@@ -31,4 +32,4 @@ while(a>1);
   else{
     Console.WriteLine(ar[2]);}
 }
-DZ_2_2();
+task13();
