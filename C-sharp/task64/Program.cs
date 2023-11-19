@@ -1,7 +1,6 @@
-﻿// Задача 64: Задайте значение N. Напишите программу, которая выведет все 
-// натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
-// N = 5 -> "5, 4, 3, 2, 1"
-// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+﻿//Задайте значения M и N. Напишите программу, которая выведет все чётные натуральные числа в промежутке от M до N с помощью рекурсии.
+//M = 1; N = 5 -> "2, 4"
+//M = 4; N = 8 -> "4, 6, 8"
 
 int ReadInt(string msg)
 {
@@ -10,21 +9,20 @@ int ReadInt(string msg)
     return result;
 }
 
-void PrintNumbers(int n)
+
+void PrintNumbers(int initialValue, int finalValue)
 {
-    if (n<=1)
+    if (initialValue<finalValue)
     {
-        Console.Write($"{n}\t");
         return;
     }
-    Console.Write($"{n}\t");
-    PrintNumbers(n-1);
+    PrintNumbers(initialValue-1,finalValue);
+    if (initialValue%2==0){
+    Console.Write($"{initialValue}\t");
+    }
+    
 }
+int M=ReadInt("введите начальное число диапазона: ");
+int N=ReadInt("введите конечное  число диапазона: ");
 
-int n=ReadInt("Введите натуральное число: ");
-while (n<1)
-{
-    Console.Write("Число не натуральное. ");
-    n=ReadInt("Введите натуральное число: ");
-}
-PrintNumbers(n);
+PrintNumbers(N,M);
